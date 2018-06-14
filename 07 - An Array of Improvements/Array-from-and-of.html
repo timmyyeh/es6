@@ -22,6 +22,11 @@
 
   function sumAll() {
     const nums = Array.from(arguments);
+    const lof = Array.of("abc");
+    const lofrom = Array.from("abc");
+    console.log(lofrom);
+    console.log(lof);
+    console.log(nums);
     return nums.reduce((prev, next) => prev + next, 0);
   }
 

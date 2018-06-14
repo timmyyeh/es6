@@ -13,15 +13,12 @@
   ];
 
   const markup = `
-    <ul class="dogs">
-      ${dogs.map(dog => `
-        <li>
-          ${dog.name}
-          is
-          ${dog.age * 7}
-        </li>`).join('')}
-    </ul>
-  `;
+    <h1>
+    ${dogs.map(dog => `<li>${dog.name} is age ${dog.age} </li>`).join('')}
+    </h1> 
+  `
+  ;
+
   document.body.innerHTML = markup;
 
 </script>

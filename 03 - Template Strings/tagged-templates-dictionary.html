@@ -22,8 +22,19 @@
     JS: 'JavaScript'
   };
 
+  function abbr(strings, ...values){
+    
+  }
+
   const first = 'Wes';
   const last = 'Bos';
+  const sentence = abbr`I love to code in ${'HTML'}, ${'CSS'} and ${'JS'}`;
+
+  const bio = document.querySelector('.bio');
+  const p = document.createElement('p');
+
+  p.innerHTML = sentence;
+  bio.appendChild(p);
 
 </script>
 </body>

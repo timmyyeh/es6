@@ -178,7 +178,14 @@
      }
   ];
   const code = 'VBgtGQcSf';
-  const post = posts.find(post => post.code === code);
+  const post = posts.find(post => {
+    return post.likes > 80;
+  });
+
+  const like = posts.filter(post => post.likes > 80 );
+
+  console.log(post);
+  console.log(like);
 
   const postIndex = posts.findIndex(post => post.code === code);
   console.log(postIndex);
