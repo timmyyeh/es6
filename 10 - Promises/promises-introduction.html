@@ -6,14 +6,16 @@
 </head>
 <body>
 <script>
-const postsPromise = fetch('http://wesbos.com/wp-json/wp/v2/posts');
+  console.log("start fetching...");
+const pp = fetch('http://httpbin.org/headers');
+// pp.then(data => data.json()).then(data => console.log(data.headers));
+// console.log(pp);
+pp
+.then(data => data.json())
+.then( d => { console.log(d) });
 
-postsPromise
-  .then(data => data.json())
-  .then(data => { console.log(data) })
-  .catch((err) => {
-    console.error(err);
-  })
+
+
 
 </script>
 </body>

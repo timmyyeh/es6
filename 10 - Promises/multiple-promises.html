@@ -25,17 +25,16 @@
   //     console.log(weatherInfo, tweetInfo)
   //   });
 
-  const postsPromise = fetch('http://wesbos.com/wp-json/wp/v2/posts');
+  const postsPromise = fetch('http://wesbos.com/wp-json/wp/v2/posts', {mode:"cors",headers:{'Access-Control-Allow-Origin':'*'
+},
+redirect:"follow",
+});
   const streetCarsPromise = fetch('http://data.ratp.fr/api/datasets/1.0/search/?q=paris');
 
-  Promise
-    .all([postsPromise, streetCarsPromise])
-    .then(responses => {
-      return Promise.all(responses.map(res => res.json()))
-    })
-    .then(responses => {
-      console.log(responses);
-    });
+  console.log("going to fetch the latest posts from ...");
+  postsPromise.then(data => {
+    console.log(data);
+  });
 
 </script>
 </body>

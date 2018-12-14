@@ -7,18 +7,21 @@
 <body>
 <script>
   const p = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      reject(Error('Err wes isn\'t cool'));
-    }, 1000);
-  });
+    // setTimeout(() => {
+    //   resolve('timmy is cool');
+    // }, 1000);
 
-  p
-    .then(data => {
-      console.log(data);
-    })
-    .catch(err => {
-      console.error(err);
-    });
+    setTimeout(() => {
+      reject(Error('time out'));
+    }, 2000);
+  })
+
+  p.then (data => {
+    console.log(data);
+  })
+  .catch(err => {
+    console.error(err);
+  }) 
 
 </script>
 </body>

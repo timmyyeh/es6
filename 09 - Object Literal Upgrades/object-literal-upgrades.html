@@ -38,10 +38,18 @@
   const key = 'pocketColor';
   const value = '#ffc600';
 
+const r = {
+  [key]: value,
+}
+console.log("...",r);
+
+
   const tShirt = {
     [key]: value,
     [`${key}Opposite`]: invertColor(value)
   };
+
+ 
 
   const keys = ['size', 'color', 'weight'];
   const values = ['medium', 'red', 100];
@@ -52,7 +60,7 @@
     [keys.shift()]: values.shift(),
   }
   console.log(shirt);
-
+  console.log(keys);
 
 </script>
 </body>

@@ -190,6 +190,10 @@
   const postIndex = posts.findIndex(post => post.code === code);
   console.log(postIndex);
 
+  console.log(posts[postIndex]);
+  posts.splice(postIndex, 1);
+  console.log(posts[postIndex]);
+
 </script>
 </body>
 </html>
