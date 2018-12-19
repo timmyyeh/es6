@@ -9,31 +9,32 @@
   class Animal {
     constructor(name) {
       this.name = name;
-      this.thirst = 100;
       this.belly = [];
+      this.thristy = 100;
     }
-    drink() {
-      this.thirst -= 10;
-      return this.thirst;
-    }
+
     eat(food) {
       this.belly.push(food);
       return this.belly;
     }
+
+    drink() {
+      this.thristy -= 10;
+      return this.thristy;
+    }
   }
 
   class Dog extends Animal {
-    constructor(name, breed) {
+    constructor(name) {
       super(name);
-      this.breed = breed;
     }
+
     bark() {
-      console.log('Bark bark I\'m a dog');
+      console.log(`I told you`);
     }
   }
-
-  const rhino = new Animal('Rhiney');
-  const snickers = new Dog('Snickers', 'King Charles');
+  const tiger = new Animal("Teddy");
+  const dog = new Dog("Kim");
 
 </script>
 </body>
