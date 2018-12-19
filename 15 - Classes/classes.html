@@ -6,16 +6,45 @@
 </head>
 <body>
 <script>
-  function Dog(name, breed) {
-    this.name = name;
-    this.breed = breed;
+
+  class Dog {
+    constructor(name, breed) {
+      this.name = name;
+      this.breed = breed;
+    }
+
+    bark(type) {
+      console.log(`bark with my ${type}`);
+    }
+
+    // static method
+    static from(arr) {
+      arr.map((e) => {
+        console.log(e);
+      })
+    }
+
+    set nickName(val) {
+      this.nick = val;
+    }
+
+    get nickName(){
+      return this.nick;
+    }
   }
 
-  Dog.prototype.bark = function () {
-    console.log(`Bark Bark! My name is ${this.name}`);
-  }
+  // function Dog(name, breed) {
+  //   this.name = name;
+  //   this.breed = breed;
+  // }
+
+  // Dog.prototype.bark = function () {
+  //   console.log(`Bark Bark! My name is ${this.name}`);
+  // }
 
   const snickers = new Dog("Snickers", "King Charles");
+  const arr = [1,2,3];
+  Dog.from(arr);
 
 </script>
 </body>
