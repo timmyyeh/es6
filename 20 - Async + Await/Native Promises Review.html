@@ -17,16 +17,18 @@
     //   console.error('OH NOO!!!!!!!');
     //   console.error(err);
     // })
+  const api = fetch('https://api.github.com/users/timmyyeh');
+  api.then(data => data.json())
+      .then(res => console.log(res));
+    // const video = document.querySelector('.handsome');
 
-    const video = document.querySelector('.handsome');
-
-    navigator.mediaDevices.getUserMedia({ video: true }).then(mediaStream => {
-      video.srcObject = mediaStream;
-      video.load();
-      video.play();
-    }).catch(err => {
-      console.log(err);
-    })
+    // navigator.mediaDevices.getUserMedia({ video: true }).then(mediaStream => {
+    //   video.srcObject = mediaStream;˘
+    //   video.load();˘
+    //   video.play();
+    // }).catch(err => {
+    //   console.log(err);
+    // })
   </script>
 </body>
 
